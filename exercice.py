@@ -3,7 +3,9 @@
 def majuscule(mot):
     mot_maj = ""
     for lettre in mot:
-        if 97 <= ord(lettre) <= 122 | 0xE0 <= ord(lettre) <= 0xFE & ord(lettre) != 0xF7:
+        if 97 <= ord(lettre) <= 122:
+            mot_maj += chr(ord(lettre) - 32)
+        elif (0xE0 <= ord(lettre) <= 0xFE) & (ord(lettre) != 0xF7):
             mot_maj += chr(ord(lettre) - 32)
         else:
             mot_maj += lettre
