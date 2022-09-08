@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 def majuscule(mot):
-    for i in range(len(mot)):
-        if 97 <= ord(mot[i]) <= 122: # Alphabet normal en minuscule sans accents
-            mot[i] += chr(ord(mot[i]) - 32)
-        elif (0xE0 <= ord(mot[i]) <= 0xFE) & (ord(mot[i]) != 0xF7): # Lettres minuscules avec accents
-            mot[i] += chr(ord(mot[i]) - 32)
+    mot_maj = ""
+    for lettre in mot:
+        if 97 <= ord(lettre) <= 122: # Alphabet normal en minuscule sans accents
+            mot_maj += chr(ord(lettre) - 32)
+        elif (0xE0 <= ord(lettre) <= 0xFE) & (ord(lettre) != 0xF7): # Lettres minuscules avec accents
+            mot_maj += chr(ord(lettre) - 32)
         else: # Lettres déjà en majuscules ou autres caractères
-            mot[i] += mot[i]
-    return mot
+            mot_maj += lettre
+    return mot_maj
 
 
 if __name__ == '__main__':
