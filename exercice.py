@@ -3,11 +3,11 @@
 def majuscule(mot):
     mot_maj = ""
     for lettre in mot:
-        if 97 <= ord(lettre) <= 122:
+        if 97 <= ord(lettre) <= 122: # Alphabet normal en minuscule sans accents
             mot_maj += chr(ord(lettre) - 32)
-        elif (0xE0 <= ord(lettre) <= 0xFE) & (ord(lettre) != 0xF7):
+        elif (0xE0 <= ord(lettre) <= 0xFE) & (ord(lettre) != 0xF7): # Lettres minuscules avec accents
             mot_maj += chr(ord(lettre) - 32)
-        else:
+        else: # Lettres déjà en majuscules ou autres caractères
             mot_maj += lettre
     return mot_maj
 
