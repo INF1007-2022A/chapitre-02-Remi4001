@@ -1,16 +1,6 @@
-test_upper_case_names (__main__.TestExercice) ... ERROR
-
-======================================================================
-ERROR: test_upper_case_names (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 17, in test_upper_case_names
-    output = list(map(exercice.majuscule, self.words))
-  File "/home/runner/work/chapitre-02-Remi4001/chapitre-02-Remi4001/exercice.py", line 6, in majuscule
-    mot[i] += chr(ord(mot[i]) - 32)
-TypeError: 'str' object does not support item assignment
+test_upper_case_names (__main__.TestExercice) ... ok
 
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
 
-FAILED (errors=1)
+OK
